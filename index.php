@@ -14,7 +14,7 @@
         <label>Numero 02</label>
         <input type="text" name="numero2" id="numero02"/>
 
-        <button>Calcular com ajax</button>
+        <button onclick="calcular();">Calcular com ajax</button>
 
         <p id="resultado"></p>
     </pre>
@@ -26,7 +26,7 @@
             fetch('/calculo.php',{
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.string({
+                body: JSON.stringify({
                     numero1: parseFloat(numero1),
                     numero2: parseFloat(numero2)
 
